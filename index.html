@@ -8,11 +8,8 @@
 </head>
 <body>
   <ul id="menu">
-    <li>items-1</li>
-    <li>items-2</li>
-    <li>items-3</li>
-    <li>items-4</li>
-    <li>items-5</li>
+    <li>포켓몬 출력</li>
+    <li>학생 출력</li>
   </ul>
   <ul></ul>
   <ul></ul>
@@ -37,31 +34,58 @@
     // 강사님과 함께 한 것
     
     
-    let menu2 = document.getElementsByTagName("ul");
-    // dir로 구성을 확인해보고 접근법을 생각하는 습관을 들이자(확인 -> 접근)
-    console.dir(menu2);
-    console.log(menu2);
-    console.log(menu.children[1]);
-    // 검증 완료
+    // let menu2 = document.getElementsByTagName("ul");
+    // // dir로 구성을 확인해보고 접근법을 생각하는 습관을 들이자(확인 -> 접근)
+    // console.dir(menu2);
+    // console.log(menu2);
+    // console.log(menu.children[1]);
+    // // 검증 완료
    
-    for(let i=0; i<menu.children.length; i++) 
-    // 반복문 조건
-    { 
-      if(menu.children[i] ===menu.children[2])
-      // 근데 반복문을 실행하다가 이러면
-      {menu.children[i].style.color = 'red';}
-      // 이거 실행해줘
-        else {
-          // 나머지는
-          menu.children[i].style.backgroundColor = 'gray';
-      }
-      // 이거 실행해줘
-    };
-    console.dir(menu.children[2]);
+    // for(let i=0; i<menu.children.length; i++) 
+    // // 반복문 조건
+    // { 
+    //   if(menu.children[i] ===menu.children[2])
+    //   // 근데 반복문을 실행하다가 이러면
+    //   {menu.children[i].style.color = 'red';}
+    //   // 이거 실행해줘
+    //     else {
+    //       // 나머지는
+    //       menu.children[i].style.backgroundColor = 'gray';
+    //   }
+    //   // 이거 실행해줘
+    // };
+    // console.dir(menu.children[2]);
     
     // 반복문의 조건을 먼저 만들어 놓고 css가 적용 되는지 dir을통해 속성을 확인해주고 접근이 성공적으로 되면 그대로 반복문의 실행문에 적용! -> 에러를 안내고 절차대로 가는 방식인듯
    
-    
+    // for(let i=0; i<menu.children.length; i++) {
+      
+    //   if(menu.children[i]===menu.children[2]) {
+    //     console.log('된다');
+    //   }
+     
+    //  else { console.log(menu.children[i]);
+    // } }
+    let poketmon = ["피카츄","라이츄","파이리"];
+    let student = ["장루빈", "김동주", "김은아"];
+
+    for(let i=0; i<poketmon.length; i++) {
+      let h2 = document.createElement("h2");
+      h2.textContent = poketmon[i];
+      menu.children[0].appendChild(h2);
+      }
+    for(let i=0; i<student.length; i++) {
+      let h2 = document.createElement("h2");
+      h2.textContent = student[i];
+      menu.children[1].appendChild(h2);
+      }
+      // if문이 없다면?
+      
+    // }
+    // if(menu.children[i]===menu.children[0]) {
+    //     let pika = document.createElement("div");
+    //   div.textContent = poketmon[i];
+    //   menu.children[0].appendChild(pika);
   </script>
   
 </body>
