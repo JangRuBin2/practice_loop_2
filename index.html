@@ -14,14 +14,36 @@
     <li>items-4</li>
     <li>items-5</li>
   </ul>
+  <ul></ul>
+  <ul></ul>
+  <ul></ul>
   <script>
     let menu = document.getElementById('menu');
-    
+    // 내가 혼자 해본 것
 
-    for(let i = 0; i<menu.children.length; i++) {
-      menu.children[i].style.setProperty('color','lime');
-    }
-    // set property를 활용해서 지정한 속성을 끌고 오는 겁니다 setProperty(속성,값)
+    // for(let i = 0; i<menu.children.length; i++) {
+    //   menu.style.color='blue';
+    // } 
+    // //단순하게 부모노드에게 컬러 블루를 적용해  자식에게도 적용
+    
+    // for(let i = 0; i<menu.children.length; i++) {
+    //   menu.children[i].style.color='blue';
+    // } 
+    // //메뉴의 하위 요소인 li(children) [i]반복문을 활용해서 하나하나 스타일을 적용
+    // for(let i = 0; i<menu.children.length; i++) {
+    //   menu.children[i].style.setProperty('color','lime');
+    // }
+    // // style에 set property를 활용해서 지정한 속성을 끌고 오게 함 -> setProperty(속성,값)
+    // 강사님과 함께 한 것
+    
+    
+    let menu2 = document.getElementsByTagName("ul");
+    // dir로 구성을 확인해보고 접근법을 생각하는 습관을 들이자(확인 -> 접근)
+    console.dir(menu2);
+    console.log(menu2);
+    
+    
+   
     
   </script>
   
