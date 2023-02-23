@@ -44,13 +44,20 @@
     console.log(menu.children[1]);
     // 검증 완료
    
-    for(let i=0; i<menu.children.length; i++) { 
-      if(menu.children[i].textContent === "items-3") 
-      {menu.children[i].style.color = "red";}
+    for(let i=0; i<menu.children.length; i++) 
+    // 반복문 조건
+    { 
+      if(menu.children[i] ===menu.children[2])
+      // 근데 반복문을 실행하다가 이러면
+      {menu.children[i].style.color = 'red';}
+      // 이거 실행해줘
         else {
-        menu.children[i].style.color = 'blue';
+          // 나머지는
+          menu.children[i].style.backgroundColor = 'gray';
       }
+      // 이거 실행해줘
     };
+    console.dir(menu.children[2]);
     
     // 반복문의 조건을 먼저 만들어 놓고 css가 적용 되는지 dir을통해 속성을 확인해주고 접근이 성공적으로 되면 그대로 반복문의 실행문에 적용! -> 에러를 안내고 절차대로 가는 방식인듯
    
